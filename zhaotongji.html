@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		<ul class="list">
+			<li class="num1">we</li>
+			<li class="num2">ds</li>
+			<li class="num3">sa</li>
+			<li class="num4">asd</li>
+			<li class="num5">ad</li>
+		</ul>
+		<script>
+		function siblings(dom){
+			var newArr=[];
+			var parent=dom.parentNode;
+			var children=parent.children;
+			for (var i = 0; i < children.length; i++) {
+				if (children[i] !== dom) {
+					newArr.push(children[i])
+				}
+			}
+				return newArr;
+		}
+	
+
+
+
+
+		var oLi=document.querySelectorAll(".list li")
+		  for(var i=0;i<oLi.length;i++){
+		  	oLi[i].onclick=function(){
+		  		console.log(siblings(this));
+		  	}
+		  }
+			// var oUl=document.querySelector("ul");
+			// var li= oUl.children;
+			// console.log(li);
+			// arr=[]
+			// if(){
+				
+			// }
+		</script>
+		
+</body>
+</html>

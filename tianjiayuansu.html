@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt">
+	<button class="btn">添加</button>
+	<ul class="list">
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+		<li>大柿子</li>
+		<li>小柿子</li>
+	</ul>
+	<script>
+		
+		var btn=document.querySelector(".btn");
+		var txt=document.querySelector(".txt");
+		btn.onclick=function(){
+			var value=txt.value;
+			var oLi=document.createElement("li");
+			oLi.innerHTML=txt.value;
+			var oUl=document.querySelector(".list");
+			oUl.appendChild(oLi)
+		}
+		var oUl=document.querySelector(".list");
+		oUl.onclick=function(event){
+			this.removeChild(event.target)
+		}
+	</script>
+</body>
+</html>

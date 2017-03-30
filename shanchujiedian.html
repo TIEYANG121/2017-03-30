@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <input type="text" class="txt">
+	<button class="btn">添加</button> -->
+	<ul class="list">
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+		<li>大柿子</li>
+		<li>小柿子</li>
+	</ul>
+	<script>
+			var oUl=document.querySelector('.list');
+			var oLi=document.querySelectorAll('.list li');
+
+			for (var i =0;i<oLi.length; i++) {
+				oLi[i].onclick =function(){
+					
+					oUl.removeChild(this)
+				}
+		}
+	</script>
+</body>
+</html>
